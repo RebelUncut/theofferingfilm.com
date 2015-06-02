@@ -1,0 +1,136 @@
+@media screen and (max-width: 800px) {
+	section {
+		min-height: 50vh;
+	}
+
+	#fold {
+		.cycle-bg-image {
+			background-image: url(/assets/img/fold-bg.png) !important;
+			opacity: 1 !important;
+		}
+
+		img.logo {
+			margin: 2rem auto;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			width: 100vw;
+		}
+
+		.bottom {
+			bottom: 2rem;
+		}
+
+		i.fa {
+			display: none;
+		}
+
+		img.cff {
+			display: none;
+		}
+	}
+
+	#synopsis {
+		padding: 2rem 0;
+		p {
+			font-size: 1rem;
+			padding: 0 2rem;
+		}
+	}
+
+	#twitter-feed {
+		padding: 0;
+		ul {
+			display: block;
+			li {
+				display: block;
+				width: 100vw;
+				border-bottom: 1px solid darken($light-grey, 5%);
+				border-right: 0;
+				padding: 2rem;
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	#team {
+		padding: 2rem 0;
+		.container {
+			padding: 0 2rem;
+		}
+		.container > div {
+			h2 {
+				margin-bottom: 1rem;
+			}
+			dl {
+				dd {
+					@include clearfix;
+					margin-left: .5rem;
+				}
+			}
+		}
+	}
+
+	#trailer {
+		height: 57vw;
+		min-height: 57vw;
+		iframe {
+			height: 57vw;
+		}
+	}
+
+	#future {
+		display: block;
+		> * {
+			width: 100vw;
+			display: block;
+		}
+		.about {
+			background: $accent-color;
+			padding: 2rem;
+			p {
+				font-size: 1rem;
+				color: white;
+			}
+		}
+		.bios {
+			display: block;
+			> li {
+				width: 100vw;
+				.inner {
+					padding: 0;
+					p {
+						padding: 2rem;
+						margin-bottom: 0;
+					}
+					ul {
+						padding: 0 2rem;
+					}
+					div.quote {
+						padding: 2rem;
+					}
+				}
+			}
+		}
+	}
+
+	#contact {
+		display: block;
+		> * {
+			width: 100vw;
+			padding: 2rem;
+			a:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.social {
+			margin-bottom: 1rem;
+		}
+		.right img {
+			width: 50vw;
+		}
+	}
+}
+
+
