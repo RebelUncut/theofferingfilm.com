@@ -371,7 +371,9 @@ section {
           font-weight: 700;
           text-decoration: none;
           color: #88089B;
-          font-family: "script", "EB Garamond", serif; }
+          font-family: "script", "EB Garamond", serif;
+          font-size: 1.5rem;
+          margin-right: .5rem; }
         #future .bios > li .inner ul {
           padding-bottom: 2.5vw; }
         #future .bios > li .inner .name {
