@@ -16,7 +16,7 @@ $secondary-color: #E10081;
 $light-grey: #f1f1f1;
 
 * {
-	font-family: "EB Garamond", sans-serif;
+	font-family: "EB Garamond", serif;
 }
 
 body {
@@ -27,92 +27,31 @@ section {
 	min-height: 100vh;
 }
 
-// #fold {
-	// 	.cycle-bg-image {
-	// 		background-size: cover !important;
-	// 	}
-	// 	img.logo {
-	// 		display: block;
-	// 		margin: 2.5vw auto;
-	// 		padding-left: 2.5vw;
-	// 		padding-right: 2.5vw; 
-	// 		position: absolute;
-	// 		width: 50vw;
-	// 	}
-	// 	.bottom {
-	// 		width: 100%;
-	// 		position: absolute;
-	// 		bottom: 2.5vw;
-	// 		%center {
-	// 			display: block;
-	// 			text-align: center;
-	// 			color: white;
-	// 			margin: 0 auto;
-	// 		}
-	// 		a.trailer {
-	// 			@extend %center;
-	// 			padding: .5em;
-	// 			text-transform: uppercase;
-	// 			font-weight: 700;
-	// 		}
-	// 		i.fa {
-	// 			@extend %center;
-	// 			font-size: 1.5rem;
-	// 		}
-	// 	}
-	// 	img.cff {
-	// 		height: 4rem;
-	// 		position: absolute;
-	// 		right: 0;
-	// 		margin-top: 2.5vw;
-	// 		margin-right: 2.5vw;
-	// 	}
-// }
-
 #fold {
-	background-image: url(/assets/img/pattern.png);
-	background-size: 10%;
+	// background-image: url(/assets/img/pattern.png);
+	// background-size: 10%;
+	@include linear-gradient(to right, $accent-color, $secondary-color, $fallback: $secondary-color);
 	min-height: 1px;
-	padding: 2.5rem 0 5rem;
+	padding: 2.5rem 0 1.5rem;
 	.logo-container {
 		img.logo {
-			width: 100vw;
+			width: 50vw;
+			margin-left: 25vw;
 			display: block;
 		}
-		.lower {
-			display:flex;
-			flex-drection: row;
-			padding: 2rem 2rem 0 2rem;
-			.supported {
-				width: 50vw;
-				h2 {
-					font-family: "EB Garamond", serif;
-					font-weight: normal;
-				}
-				ul {
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					li {
-						margin-right: 1rem;
-						a {
-							img {
-								height: 3.5rem;
-							}
-						}
-					}
-				}
-			}
-			.credits {
-				width: 50vw;
-				text-align: right;
-				p {
-					text-align: right;
-					width: 100%;
-					margin-bottom: .5rem;
+		.credits {
+			text-align: center;
+			margin-top: 2rem;
+			color: white;
+			p {
+				width: 100%;
+				margin-top: .5rem;
+				font-size: 1.25rem;
+				&.links {
+					margin-top: 2rem;
 					a {
-						margin-left: 1rem;
-						color: $secondary-color;
+						margin: 0 1rem;
+						color: white;
 					}
 				}
 			}
@@ -120,42 +59,88 @@ section {
 	}
 }
 
-#synopsis {
-	background: $accent-color;
+#funders-partners {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	p {
-		@include outer-container;
+	flex-direction: row;
+	min-height: 1px;
+	> * {
+		width: 50vw;
+		padding: 2rem;
+		h2 {
+			font-family: "EB Garamond", serif;
+			font-weight: normal;
+			font-size: 1.25rem;
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			li {
+				a {
+					img {
+						height: 2.5rem;
+					}
+				}
+			}
+		}
+	}
+	.funders {
+		ul li {
+			margin-right: 2rem;
+		}
+	}
+	.partners {
+		h2 {
+			text-align: right;
+		}
+		ul {
+			justify-content: flex-end;
+			li {
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+
+// Parallax
+	/* fullscreen setup */
+	html, body {
+	    /* give this to all tags from html to .fullscreen */
+	    height:100%;
+	}
+	.fullscreen,
+	.content-a {
+	    width:100%;
+	    min-height:100%;
+	}
+	.not-fullscreen,
+	.not-fullscreen .content-a,
+	.fullscreen.not-overflow,
+	.fullscreen.not-overflow .content-a {
+	    height:100%;
+	    overflow:hidden;
+	}
+
+	/* content centering styles */
+	.content-a {
+	    display:table;
+	    @include outer-container;
+	}
+	.content-b {
+	    display:table-cell;
+	    position:relative;
+	    vertical-align:middle;
+	    @include outer-container;
 		color: white;
 		font-size: 1.75rem;
 		padding: 0 2.5vw; 
 		margin-bottom: 0;
+		text-shadow: 0 0 5px black;
+		p {
+			margin-bottom: 0;
+		}
 	}
-}
 
-#twitter-feed {
-	background: $light-grey;
-	padding: 2.5vw 0;
-	ul {
-	 	display: flex;
-	 	li {
-	 		width: 33.3vw;
-	 		padding: 0 2.5vw;
-	 		border-right: 1px solid darken($light-grey, 5%);
-	 		p {
-	 			margin-bottom: 0;
-	 		}
-	 		a {
-	 			color: $secondary-color;
-	 			text-decoration: underline;
-	 		}
-	 		&:last-child {
-	 			border-right: 0;
-	 		}
-	 	}
-	}
-}
 
 #team {
 	display: flex;
@@ -200,35 +185,6 @@ section {
 	}
 }
 
-// #trailer {
-// 	iframe {
-// 		width: 100vw;
-// 		height: 100vh;
-// 	}
-// }
-
-#support {
-	@include linear-gradient(to right, $accent-color, $secondary-color, $fallback: $secondary-color);
-	a h1 {
-		color: white;
-		text-align: center;
-		padding: 4rem;
-		font-size: 1.75rem;
-		font-family: "script", "EB Garamond", serif;
-		text-transform: uppercase;
-		i {
-			@include transition;
-			font-size: .7em;
-		}
-		&:hover {
-			i {
-				@include transition;
-				margin-left: 1rem;
-			}
-		}
-	}
-}
-
 #future {
 	display: flex;
 	flex-direction: column;
@@ -241,7 +197,7 @@ section {
 		justify-content: center;
 		padding: 5vw 2.5vw;
 		p {
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
 			&:last-child {
 				margin-bottom: 1em;
 			}
@@ -256,6 +212,7 @@ section {
 	.bios {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		> li {
 			width: 50vw;
 			img {
@@ -267,13 +224,12 @@ section {
 					margin-bottom: 2.5vw;
 				}
 				a {
-					text-transform: uppercase;
 					font-weight: 700;
 					text-decoration: none;
 					color: $accent-color;
 					font-family: "script", "EB Garamond", serif;
-					font-size: 1.5rem;
-					margin-right: .5rem;
+					font-size: 1.25rem;
+					margin-right: .25rem;
 				}
 				ul {
 					padding-bottom: 2.5vw;
@@ -282,12 +238,20 @@ section {
 					color: $accent-color;
 				}
 			}
-			&:last-child .inner {
+			&:nth-child(2) .inner {
 				a {
 					color: $secondary-color;
 				}
 				.name {
 					color: $secondary-color;
+				}
+			}
+			&.collaborator {
+				width: 25vw;
+				text-align: center;
+				p, h1 {
+					margin-bottom: .5rem;
+					margin-top: .5rem;
 				}
 			}
 		}
