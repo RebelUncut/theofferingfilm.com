@@ -70,6 +70,7 @@ section {
 			font-family: "EB Garamond", serif;
 			font-weight: normal;
 			font-size: 1.25rem;
+			color: #252525;
 		}
 		ul {
 			display: flex;
@@ -109,6 +110,11 @@ section {
 	    /* give this to all tags from html to .fullscreen */
 	    height:100%;
 	}
+	.fullscreen {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 	.fullscreen,
 	.content-a {
 	    width:100%;
@@ -118,7 +124,7 @@ section {
 	.not-fullscreen .content-a,
 	.fullscreen.not-overflow,
 	.fullscreen.not-overflow .content-a {
-	    height:100%;
+	    min-height:100%;
 	    overflow:hidden;
 	}
 
