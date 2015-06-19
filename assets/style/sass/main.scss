@@ -78,6 +78,7 @@ section {
 			li {
 				a {
 					img {
+						margin-top: 2rem;
 						height: 2.5rem;
 					}
 				}
@@ -220,6 +221,7 @@ section {
 			}
 			.inner {
 				padding: 2.5vw;
+				padding-bottom: 3.5vw;
 				p {
 					margin-bottom: 2.5vw;
 				}
@@ -230,12 +232,24 @@ section {
 					font-family: "script", "EB Garamond", serif;
 					font-size: 1.25rem;
 					margin-right: .25rem;
+					font-weight: 500;
 				}
-				ul {
+				ul.filmography {
 					padding-bottom: 2.5vw;
+				}
+				ul.links {
+					display: block;
+					li {
+						display: inline;
+						a {
+							font-size: .8rem;
+							margin-right: .5rem;
+						}
+					}
 				}
 				.name {
 					color: $accent-color;
+					font-weight: 500;
 				}
 			}
 			&:nth-child(2) .inner {
@@ -252,58 +266,30 @@ section {
 				p, h1 {
 					margin-bottom: .5rem;
 					margin-top: .5rem;
+					font-weight: 500;
+				}
+				p {
+					margin-bottom: 0;
+				}
+				h1 a.p {
+					color: $secondary-color;
 				}
 			}
 		}
 	}
 }
 
-#contact {
-	background: $accent-color;
-	display: flex;
-	flex-direction: row;
-	.left {
-		background: $accent-color;
-		* {
-			text-align: center;
-			color: white;
-		}
-		.social {
-			margin-bottom: 2rem;
-			li {
-				display: inline;
-				margin: 0 1rem;
-				a {
-					i {
-
-					}
-				}
-			}
-		}
-		.person {
-			p {
-				margin: .5rem;
-				&.name {
-					font-family: "script", "EB Garamond", serif;
-					font-size: 1.5rem;
-				}
-			}
-			a {
-				display: block;
-				margin: .5rem;
-				text-decoration: underline;
-			}
-		}
-	}
-	> * {
-		width: 50vw;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	.right{
-		@extend .left;
-		background-color: $secondary-color;
+#dance-film {
+	min-height: 1px;
+	a {
+		display: block;
+		color: white;
+		padding: 2rem;
+		@include linear-gradient(to right, $accent-color, $secondary-color, $fallback: $secondary-color);
+		color: white;
+		text-align: center;
+		font-size: 1.5rem;
+		@include transition;
 	}
 }
 

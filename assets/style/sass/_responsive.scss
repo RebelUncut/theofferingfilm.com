@@ -4,16 +4,15 @@
 	}
 
 	#fold {
+		padding: 2.5rem 0;
 		.cycle-bg-image {
 			background-image: url(/assets/img/fold-bg.png) !important;
 			opacity: 1 !important;
 		}
 
-		img.logo {
-			margin: 2rem auto;
-			padding-left: 2rem;
-			padding-right: 2rem;
-			width: 100vw;
+		.logo-container img.logo {
+			width: 75vw;
+			margin-left: 12.5vw;
 		}
 
 		.bottom {
@@ -26,6 +25,19 @@
 
 		img.cff {
 			display: none;
+		}
+
+		.logo-container .credits {
+			padding: 0 2rem;
+			p {
+				font-size: 1rem;
+			}
+			p.staring {
+				margin-bottom: 0;
+			}
+			p.links {
+				display: none;
+			}
 		}
 	}
 

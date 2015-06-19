@@ -241,7 +241,6 @@ section {
       flex-direction: row;
       flex-wrap: wrap; }
       #funders-partners > * ul li a img {
-        margin-top: 2rem;
         height: 2.5rem; }
   #funders-partners .funders ul li {
     margin-right: 2rem; }
@@ -369,8 +368,7 @@ html, body {
       #future .bios > li img {
         width: 100%; }
       #future .bios > li .inner {
-        padding: 2.5vw;
-        padding-bottom: 3.5vw; }
+        padding: 2.5vw; }
         #future .bios > li .inner p {
           margin-bottom: 2.5vw; }
         #future .bios > li .inner a {
@@ -379,20 +377,11 @@ html, body {
           color: #88089B;
           font-family: "script", "EB Garamond", serif;
           font-size: 1.25rem;
-          margin-right: .25rem;
-          font-weight: 500; }
-        #future .bios > li .inner ul.filmography {
+          margin-right: .25rem; }
+        #future .bios > li .inner ul {
           padding-bottom: 2.5vw; }
-        #future .bios > li .inner ul.links {
-          display: block; }
-          #future .bios > li .inner ul.links li {
-            display: inline; }
-            #future .bios > li .inner ul.links li a {
-              font-size: .8rem;
-              margin-right: .5rem; }
         #future .bios > li .inner .name {
-          color: #88089B;
-          font-weight: 500; }
+          color: #88089B; }
       #future .bios > li:nth-child(2) .inner a {
         color: #E10081; }
       #future .bios > li:nth-child(2) .inner .name {
@@ -402,28 +391,38 @@ html, body {
         text-align: center; }
         #future .bios > li.collaborator p, #future .bios > li.collaborator h1 {
           margin-bottom: .5rem;
-          margin-top: .5rem;
-          font-weight: 500; }
-        #future .bios > li.collaborator p {
-          margin-bottom: 0; }
-        #future .bios > li.collaborator h1 a.p {
-          color: #E10081; }
+          margin-top: .5rem; }
 
-#dance-film {
-  min-height: 1px; }
-  #dance-film a {
-    display: block;
-    color: white;
-    padding: 2rem;
-    background-color: #E10081;
-    background-image: -webkit-linear-gradient(left, #88089B, #E10081);
-    background-image: linear-gradient(to right,#88089B, #E10081);
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    -webkit-transition: all 0.15s ease-out 0s;
-    -moz-transition: all 0.15s ease-out 0s;
-    transition: all 0.15s ease-out 0s; }
+#contact {
+  background: #88089B;
+  display: flex;
+  flex-direction: row; }
+  #contact .left, #contact .right {
+    background: #88089B; }
+    #contact .left *, #contact .right * {
+      text-align: center;
+      color: white; }
+    #contact .left .social, #contact .right .social {
+      margin-bottom: 2rem; }
+      #contact .left .social li, #contact .right .social li {
+        display: inline;
+        margin: 0 1rem; }
+    #contact .left .person p, #contact .right .person p {
+      margin: .5rem; }
+      #contact .left .person p.name, #contact .right .person p.name {
+        font-family: "script", "EB Garamond", serif;
+        font-size: 1.5rem; }
+    #contact .left .person a, #contact .right .person a {
+      display: block;
+      margin: .5rem;
+      text-decoration: underline; }
+  #contact > * {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  #contact .right {
+    background-color: #E10081; }
 
 #copyright {
   text-align: center;
@@ -438,28 +437,20 @@ html, body {
   section {
     min-height: 50vh; }
 
-  #fold {
-    padding: 2.5rem 0; }
-    #fold .cycle-bg-image {
-      background-image: url(/assets/img/fold-bg.png) !important;
-      opacity: 1 !important; }
-    #fold .logo-container img.logo {
-      width: 75vw;
-      margin-left: 12.5vw; }
-    #fold .bottom {
-      bottom: 2rem; }
-    #fold i.fa {
-      display: none; }
-    #fold img.cff {
-      display: none; }
-    #fold .logo-container .credits {
-      padding: 0 2rem; }
-      #fold .logo-container .credits p {
-        font-size: 1rem; }
-      #fold .logo-container .credits p.staring {
-        margin-bottom: 0; }
-      #fold .logo-container .credits p.links {
-        display: none; }
+  #fold .cycle-bg-image {
+    background-image: url(/assets/img/fold-bg.png) !important;
+    opacity: 1 !important; }
+  #fold img.logo {
+    margin: 2rem auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100vw; }
+  #fold .bottom {
+    bottom: 2rem; }
+  #fold i.fa {
+    display: none; }
+  #fold img.cff {
+    display: none; }
 
   #synopsis {
     padding: 2rem 0; }
@@ -536,4 +527,4 @@ html, body {
     #contact .right img {
       width: 50vw; } }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=ma.map */
