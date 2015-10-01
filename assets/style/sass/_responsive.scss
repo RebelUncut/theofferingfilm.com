@@ -185,6 +185,15 @@
 			font-size: 1rem;
 		}		
 	}
+
+	#production-shots {
+		flex-wrap: wrap;
+		display: flex;
+		img {
+			width: 50vw;
+			height: 33vw;
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -196,6 +205,10 @@
 		h1,
 		p {
 			display: inline !important;
+		}
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 2em;
 		}
 	}
 }

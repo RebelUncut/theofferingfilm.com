@@ -224,13 +224,16 @@ section {
         #fold .logo-container .credits p.links a {
           margin: 0 1rem;
           color: white; }
+          #fold .logo-container .credits p.links a i {
+            font-size: 0.8em;
+            margin-right: 0.5em; }
 
 #funders-partners {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 1px; }
   #funders-partners > * {
-    width: 50vw;
+    width: 100vw;
     padding: 2rem; }
     #funders-partners > * h2 {
       font-family: "EB Garamond", serif;
@@ -242,16 +245,20 @@ section {
       flex-direction: row;
       flex-wrap: wrap; }
       #funders-partners > * ul li a img {
-        margin-top: 2rem;
-        height: 2.5rem; }
-  #funders-partners .funders ul li {
-    margin-right: 2rem; }
-  #funders-partners .partners h2 {
-    text-align: right; }
-  #funders-partners .partners ul {
-    justify-content: flex-end; }
-    #funders-partners .partners ul li {
-      margin-left: 2rem; }
+        margin-top: 0.5rem;
+        height: 3rem; }
+  #funders-partners .partners h2,
+  #funders-partners .funders h2 {
+    text-align: center; }
+  #funders-partners .partners ul,
+  #funders-partners .funders ul {
+    justify-content: center; }
+    #funders-partners .partners ul li,
+    #funders-partners .funders ul li {
+      margin-left: 1rem;
+      margin-right: 1em; }
+  #funders-partners .partners {
+    padding-top: 0; }
 
 /* fullscreen setup */
 html, body {
@@ -305,6 +312,14 @@ html, body {
   .content-b p {
     margin-bottom: 0; }
 
+#production-shots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+  #production-shots img {
+    width: 16.66667vw;
+    height: 11vw; }
+
 #team {
   display: flex;
   flex-direction: column;
@@ -346,7 +361,7 @@ html, body {
   display: flex;
   flex-direction: column; }
   #future > * {
-    min-height: 50vh; }
+    min-height: 1px; }
   #future .about {
     display: flex;
     flex-direction: column;
@@ -404,7 +419,7 @@ html, body {
       #future .bios > li:nth-child(2) .inner .name {
         color: #E10081; }
       #future .bios > li.collaborator {
-        width: 25vw;
+        width: 20vw;
         text-align: center; }
         #future .bios > li.collaborator p, #future .bios > li.collaborator h1 {
           margin-bottom: .5rem;
@@ -439,6 +454,40 @@ html, body {
     #copyright p a {
       color: #88089B;
       text-decoration: underline; }
+
+#opportunity {
+  max-width: 68rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em;
+  margin-top: 2em; }
+  #opportunity:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #opportunity a.back {
+    color: #88089B;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+    display: block; }
+  #opportunity h2 {
+    font-family: "EB Garamond", serif;
+    font-size: 2em; }
+  #opportunity h3 {
+    font-family: "EB Garamond", serif;
+    margin-bottom: 2rem;
+    line-height: 1.5; }
+  #opportunity p {
+    margin-bottom: 1.5em; }
+    #opportunity p a {
+      color: #88089B;
+      text-decoration: underline; }
+  #opportunity ul li {
+    list-style-type: circle;
+    margin-bottom: 0.75em;
+    margin-left: 1.25em; }
+    #opportunity ul li:last-child {
+      margin-bottom: 1.5em; }
 
 @media screen and (max-width: 800px) {
   section {
@@ -570,14 +619,24 @@ html, body {
   #dance-film {
     display: inline-block; }
     #dance-film a {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+
+  #production-shots {
+    flex-wrap: wrap;
+    display: flex; }
+    #production-shots img {
+      width: 50vw;
+      height: 33vw; } }
 @media screen and (max-width: 600px) {
   #future .bios > li.collaborator {
-    width: 100vw; }
+    width: 100vw;
+    margin-bottom: 1em; }
     #future .bios > li.collaborator img {
       display: none; }
     #future .bios > li.collaborator h1,
     #future .bios > li.collaborator p {
-      display: inline !important; } }
+      display: inline !important; }
+    #future .bios > li.collaborator:last-child {
+      margin-bottom: 2em; } }
 
 /*# sourceMappingURL=main.css.map */

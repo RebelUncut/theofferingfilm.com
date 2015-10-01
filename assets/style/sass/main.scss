@@ -52,6 +52,10 @@ section {
 					a {
 						margin: 0 1rem;
 						color: white;
+						i {
+							font-size: 0.8em;
+							margin-right: 0.5em;
+						}
 					}
 				}
 			}
@@ -61,10 +65,10 @@ section {
 
 #funders-partners {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	min-height: 1px;
 	> * {
-		width: 50vw;
+		width: 100vw;
 		padding: 2rem;
 		h2 {
 			font-family: "EB Garamond", serif;
@@ -79,28 +83,28 @@ section {
 			li {
 				a {
 					img {
-						margin-top: 2rem;
-						height: 2.5rem;
+						margin-top: 0.5rem;
+						height: 3rem;
 					}
 				}
 			}
 		}
 	}
+	.partners,
 	.funders {
-		ul li {
-			margin-right: 2rem;
+		h2 {
+			text-align: center;
+		}
+		ul {
+			justify-content: center;
+			li {
+				margin-left: 1rem;
+				margin-right: 1em;
+			}
 		}
 	}
 	.partners {
-		h2 {
-			text-align: right;
-		}
-		ul {
-			justify-content: flex-end;
-			li {
-				margin-left: 2rem;
-			}
-		}
+		padding-top: 0;
 	}
 }
 
@@ -148,6 +152,15 @@ section {
 		}
 	}
 
+#production-shots {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	img {
+		width: (100 / 6) + vw;
+		height: 11vw;
+	}
+}
 
 #team {
 	display: flex;
@@ -196,7 +209,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	> * {
-		min-height: 50vh;
+		min-height: 1px;
 	}
 	.about {
 		display: flex;
@@ -267,7 +280,7 @@ section {
 				}
 			}
 			&.collaborator {
-				width: 25vw;
+				width: 20vw;
 				text-align: center;
 				p, h1 {
 					margin-bottom: .5rem;
@@ -307,6 +320,44 @@ section {
 		a {
 			color: $accent-color;
 			text-decoration: underline;
+		}
+	}
+}
+
+#opportunity {
+	@include outer-container;
+	padding: 0 2em;
+	margin-top: 2em;
+	a.back {
+		color: $accent-color;
+		text-decoration: underline;
+		margin-bottom: 1.5rem;
+		display: block;
+	}
+	h2 {
+		font-family: "EB Garamond", serif;
+		font-size: 2em;
+	}
+	h3 {
+		font-family: "EB Garamond", serif;
+		margin-bottom: 2rem;
+		line-height: 1.5;
+	}
+	p {
+		margin-bottom: 1.5em;
+		a {
+			color: $accent-color;
+			text-decoration: underline;
+		}
+	}
+	ul {
+		li {
+			list-style-type: circle;
+			margin-bottom: 0.75em;
+			margin-left: 1.25em;
+			&:last-child {
+				margin-bottom: 1.5em;
+			}
 		}
 	}
 }
